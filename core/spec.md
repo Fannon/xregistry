@@ -2371,9 +2371,9 @@ The following describes the attributes of Registry model:
       This label will most likely only appear as a label on the model itself,
       not on Groups or Resource model definitions.
     - Name: `compatiblewith`
-      Value: An absolute URL to the model specification that this model is
-      compatible with. This specification does not mandate any runtime
-      validation of this claim.
+      Value: URI that references / represents an xRegistry model definition
+      that this model is compatible with.
+      Stating this does not imply runtime validation of this claim.
   - Model authors MAY define additional labels.
 
 - `attributes` <span id="model.attributes"></span>

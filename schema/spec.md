@@ -36,7 +36,7 @@ this form:
   "documentation": "URL", ?
   "labels": {
     "modelversion": "1.0", ?
-    "compatiblewith": "https://github.com/xregistry/spec/blob/main/schema/spec.md", ?
+    "compatiblewith": "https://github.com/xregistry/spec/blob/main/schema/spec.md", ? # TODO: Doesn't work, URL needs to change
     "STRING": "STRING" *
   }, ?
   "createdat": "TIMESTAMP",
@@ -161,8 +161,8 @@ version" and the **schema Versions** as "minor versions".
 The formal xRegistry extension model of the Schema Registry resides in the
 [model.json](model.json) file.
 
-By importing and keeping the `compatiblewith` label, interoperability on the
-CNCF defined endpoint model is stated.
+By importing and keeping the `compatiblewith` label and its value,
+interoperability on the CNCF defined endpoint model is stated.
 
 #### Schema Group
 

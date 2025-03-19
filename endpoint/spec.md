@@ -36,7 +36,7 @@ this form:
   "documentation": "URL", ?
   "labels": {
     "modelversion": "1.0", ?
-    "compatiblewith": "https://github.com/xregistry/spec/blob/main/endpoint/spec.md", ?
+    "compatiblewith": "https://xregistry.soaphub.org/model/groups/endpoints", ? # TODO: Doesn't work, URL needs to change
     "STRING": "STRING" *
   }, ?
   "createdat": "TIMESTAMP",
@@ -200,8 +200,8 @@ the Endpoint Registry are likewise `messages` as defined in the
 
 The resource model for endpoints can be found in [model.json](model.json).
 
-By importing and keeping the `compatiblewith` label, interoperability on the
-CNCF defined endpoint model is stated.
+By importing and keeping the `compatiblewith` label and its value,
+interoperability on the CNCF defined endpoint model is stated.
 
 ### Endpoints
 
