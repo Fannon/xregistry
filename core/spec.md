@@ -138,6 +138,8 @@ For easy reference, the JSON serialization of a Registry adheres to this form:
 
   "model": {                            # Only if inlined
     "labels": { "STRING": "STRING" * }, ?
+    "modelversion": "STRING", ?         # Version of the model
+    "compatiblewith": "URI", ?          # Statement of compatibility with model spec
     "attributes": {                     # Registry level attributes/extensions
       "STRING": {                       # Attribute name (case sensitive)
         "name": "STRING",               # Same as attribute's key
@@ -597,6 +599,8 @@ form:
 - `"labels": { "STRING": "STRING" * }`
 - `"createdat": "TIMESTAMP"`
 - `"modifiedat": "TIMESTAMP"`
+- `"modelversion": "STRING"`
+- `"compatiblewith": "URI"`
 
 The definition of each attribute is defined below:
 
@@ -944,6 +948,35 @@ of the existing entity. Then the existing entity would be deleted.
 
 - Examples:
   - `2030-12-19T06:00:00Z`
+
+#### modelversion
+
+- Type: String
+- Description: The version of the model. It is common to use a combination
+  of major and minor version numbers.
+
+- Constraints:
+  - OPTIONAL.
+  - Only applicable on model definition
+
+- Examples:
+  - `1.2`
+
+#### compatiblewith
+
+- Type: URI
+- Description: References / represents an xRegistry model definition that
+  the current model is compatible with. This is meant to express
+  interoperability between models in different xRegistries via using a
+  shared compatible model.
+
+- Constraints:
+  - OPTIONAL.
+  - Only applicable on model definition
+  - Does not imply runtime validation of the claim
+
+- examples:
+  - `https://raw.githubusercontent.com/xregistry/spec/refs/heads/main/schema/model.json`
 
 ---
 
@@ -2363,17 +2396,6 @@ The following describes the attributes of Registry model:
     information.
   - Keys MUST be non-empty strings.
   - Values MAY be empty strings.
-  - The following labels are defined for convenience and MAY also be used
-    as labels for Groups or Resource model types:
-    - Name: `modelversion`
-      Value: The version of the model. For many specifications it's a
-      combination of major and minor version numbers, e.g. `1.2`.
-      This label will most likely only appear as a label on the model itself,
-      not on Groups or Resource model definitions.
-    - Name: `compatiblewith`
-      Value: URI that references / represents an xRegistry model definition
-      that this model is compatible with.
-      Stating this does not imply runtime validation of this claim.
   - Model authors MAY define additional labels.
 
 - `attributes` <span id="model.attributes"></span>
@@ -3021,6 +3043,8 @@ Content-Type: application/json; charset=utf-8
 
 {
   "labels": { "STRING": "STRING" * }, ?
+  "modelversion": "STRING", ?
+  "compatiblewith": "URI", ?
   "attributes": {
     "STRING": {
       "name": "STRING",
@@ -3090,6 +3114,8 @@ Content-Type: application/json; charset=utf-8
 
 {
   "labels": { "STRING": "STRING" * }, ?
+  "modelversion": "STRING", ?
+  "compatiblewith": "URI", ?
   "attributes": {
     "STRING": {
       "name": "STRING",

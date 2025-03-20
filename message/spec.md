@@ -40,12 +40,12 @@ this form:
   "description": "STRING", ?
   "documentation": "URL", ?
   "labels": {
-    "modelversion": "1.0", ?
-    "compatiblewith": "https://github.com/xregistry/spec/blob/main/message/spec.md", ? # URL needs to change
-    "STRING": "STRING" *
+      "STRING": "STRING" *
   }, ?
   "createdat": "TIMESTAMP",
   "modifiedat": "TIMESTAMP",
+  "modelversion": "1.0", ?
+  "compatiblewith": "https://raw.githubusercontent.com/xregistry/spec/refs/heads/main/message/model.json", ?
 
   "model": { ... }, ?
 

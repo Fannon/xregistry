@@ -35,12 +35,12 @@ this form:
   "description": "STRING", ?
   "documentation": "URL", ?
   "labels": {
-    "modelversion": "1.0", ?
-    "compatiblewith": "https://xregistry.soaphub.org/model/groups/endpoints", ? # TODO: Doesn't work, URL needs to change
-    "STRING": "STRING" *
+      "STRING": "STRING" *
   }, ?
   "createdat": "TIMESTAMP",
   "modifiedat": "TIMESTAMP",
+  "modelversion": "1.0", ?
+  "compatiblewith": "https://raw.githubusercontent.com/xregistry/spec/refs/heads/main/endpoint/model.json", ?
 
   "model": { ... }, ?
 
