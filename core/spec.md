@@ -957,7 +957,7 @@ of the existing entity. Then the existing entity would be deleted.
 
 - Constraints:
   - OPTIONAL.
-  - Only applicable on model definition
+  - Only applicable on model definition.
 
 - Examples:
   - `1.2`
@@ -972,8 +972,8 @@ of the existing entity. Then the existing entity would be deleted.
 
 - Constraints:
   - OPTIONAL.
-  - Only applicable on model definition
-  - Does not imply runtime validation of the claim
+  - Only applicable on model definition.
+  - Does not imply runtime validation of the claim.
 
 - examples:
   - `https://raw.githubusercontent.com/xregistry/spec/refs/heads/main/schema/model.json`
